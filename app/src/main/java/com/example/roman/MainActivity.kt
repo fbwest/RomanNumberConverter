@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         // Decimal to Roman converter
         binding.convertToRomanNumeral.setOnClickListener {
             try {
-                val input = binding.decimalEt.text.toString()
+                val input = binding.integerEt.text.toString()
                 if (input.isNotEmpty() && input.matches(Regex("\\d+"))) {
                     val number = input.toInt()
                     if (number in 1..3999) {
