@@ -1,8 +1,7 @@
 <resources>
-    <string name="app_name">Roman</string>
-    <string name="roman_numeral_convertor">Roman Numeral Convertor</string>
-    <string name="decimal_to_roman_numeral">Decimal to Roman Numeral</string>
-    <string name="convert_to_roman_numeral">Convert to roman numeral</string>
-    <string name="roman_to_decimal_number">Roman to Decimal Number</string>
-    <string name="convert_to_decimal">Convert to decimal</string>
+    <string name="app_name">Конвертер римских чисел</string>
+    <string name="roman_numeral_convertor">Конвертер римских чисел</string>
+    <string name="integer_to_roman_numeral">Арабские числа в римские числа</string>
+    <string name="convert">Конвертировать</string>
+    <string name="roman_to_integer_number">Римские числа в арабские числа</string>
 </resources>
