@@ -37,7 +37,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         android:minHeight="48dp" />
 
     <Button
@@ -75,7 +75,7 @@
         android:minHeight="48dp" />
 
     <Button
-        android:id="@+id/convert_to_decimal"
+        android:id="@+id/convert_to_integer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -84,7 +84,7 @@
         android:text="Конвертировать" />
 
     <TextView
-        android:id="@+id/decimal_tv"
+        android:id="@+id/integer_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

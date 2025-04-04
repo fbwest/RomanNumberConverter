@@ -15,14 +15,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Decimal to Roman converter
         binding.convertToRomanNumeral.setOnClickListener {
             try {
                 val input = binding.integerEt.text.toString()
                 if (input.isNotEmpty() && input.matches(Regex("\\d+"))) {
                     val number = input.toInt()
                     if (number in 1..3999) {
-                        val roman = decimalToRoman(number)
+                        val roman = integerToRoman(number)
                         binding.romanNumeralTv.text = roman
                     } else {
                         Toast.makeText(this, "Введите число от 1 до 3999", Toast.LENGTH_SHORT).show()
@@ -35,13 +34,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Roman to Decimal converter
-        binding.convertToDecimal.setOnClickListener {
+        binding.convertToInteger.setOnClickListener {
             try {
                 val input = binding.romanEt.text.toString()
                 if (input.isNotEmpty() && input.matches(Regex("[IVXLCDM]+"))) {
-                    val decimal = romanToDecimal(input)
-                    binding.decimalTv.text = decimal.toString()
+                    val integer = romanToInteger(input)
+                    binding.integerTv.text = integer.toString()
                 } else {
                     Toast.makeText(this, "Введите правильное римское число", Toast.LENGTH_SHORT).show()
                 }
@@ -51,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun decimalToRoman(num: Int): String {
+    private fun integerToRoman(num: Int): String {
         val m = arrayOf("", "M", "MM", "MMM")
         val c = arrayOf("", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM")
         val x = arrayOf("", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC")
@@ -78,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun romanToDecimal(str: String): Int {
+    private fun romanToInteger(str: String): Int {
         var res = 0
         var i = 0
         while (i < str.length) {
